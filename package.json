@@ -1,0 +1,22 @@
+{
+  "name": "space-invaders",
+  "version": "1.0.0",
+  "description": "A vanilla JavaScript game with HTML and CSS",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/w0ober/space-invaders.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/w0ober/space-invaders/issues"
+  },
+  "homepage": "https://github.com/w0ober/space-invaders#readme",
+  "dependencies": {
+    "jquery": "^3.6.0"
+  }
+}
