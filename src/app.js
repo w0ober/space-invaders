@@ -10,19 +10,7 @@ let invadersId
 let goingRight = true
 let aliensRemoved = []
 let results = 0
-
-for (let i = 0; i < 225; i++) {
-  const square = document.createElement('div')
-  grid.appendChild(square)
-}
-
-const squares = Array.from(document.querySelectorAll('.grid div'))
-
-const alienInvaders = [
-  0,1,2,3,4,5,6,7,8,9,
-  15,16,17,18,19,20,21,22,23,24,
-  30,31,32,33,34,35,36,37,38,39
-]
+let alienInvaders = []
 
 function draw() {
   for (let i = 0; i < alienInvaders.length; i++) {
@@ -32,7 +20,12 @@ function draw() {
   }
 }
 
-draw()
+for (let i = 0; i < 225; i++) {
+  const square = document.createElement('div')
+  grid.appendChild(square)
+}
+
+const squares = Array.from(document.querySelectorAll('.grid div'))
 
 function remove() {
   for (let i = 0; i < alienInvaders.length; i++) {
@@ -82,7 +75,7 @@ function moveInvaders() {
     alienInvaders[i] += direction
   }
 
-  draw()
+
 
   if (squares[currentShooterIndex].classList.contains('invader', 'shooter')) {
     resultsDisplay.innerHTML = 'GAME OVER'
@@ -100,7 +93,6 @@ function moveInvaders() {
     clearInterval(invadersId)
   }
 }
-invadersId = setInterval(moveInvaders, 600)
 
 function shoot(e) {
   let laserId
@@ -132,5 +124,21 @@ function shoot(e) {
       laserId = setInterval(moveLaser, 100)
   }
 }
+function startGame() {
+
+  alienInvaders = [
+    0,1,2,3,4,5,6,7,8,9,
+    15,16,17,18,19,20,21,22,23,24,
+    30,31,32,33,34,35,36,37,38,39
+  ]
+  draw()
+  invadersId = setInterval(moveInvaders, 600)
+  };
 
 document.addEventListener('keydown', shoot)
+
+document.getElementById("replay").addEventListener("click", function() {
+startGame();
+});
+
+document.getElementById("start").addEventListener("click", startGame);
