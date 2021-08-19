@@ -75,7 +75,7 @@ function moveInvaders() {
     alienInvaders[i] += direction
   }
 
-
+draw()
 
   if (squares[currentShooterIndex].classList.contains('invader', 'shooter')) {
     resultsDisplay.innerHTML = 'GAME OVER'
@@ -124,8 +124,18 @@ function shoot(e) {
       laserId = setInterval(moveLaser, 100)
   }
 }
-function startGame() {
 
+function replay() {
+remove()
+var invaderStart = document.querySelectorAll(".invader");
+  for (let i = 0; i < alienInvaders.length; i++) {
+    console.log("its gone :)");
+    clearInterval()
+  }
+}
+
+
+function startGame() {
   alienInvaders = [
     0,1,2,3,4,5,6,7,8,9,
     15,16,17,18,19,20,21,22,23,24,
@@ -136,9 +146,5 @@ function startGame() {
   };
 
 document.addEventListener('keydown', shoot)
-
-document.getElementById("replay").addEventListener("click", function() {
-startGame();
-});
-
+document.getElementById("replay").addEventListener("click", replay);
 document.getElementById("start").addEventListener("click", startGame);
