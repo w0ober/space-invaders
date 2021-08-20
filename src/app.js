@@ -1,5 +1,5 @@
-import $ from 'jquery'
 import 'style.css'
+import $ from 'jquery'
 
 const grid = document.querySelector('.grid')
 const resultsDisplay = document.querySelector('.results')

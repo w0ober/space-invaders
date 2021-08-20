@@ -14,20 +14,6 @@ This walkthrough has been updated. Please see the newest version of the full wal
 
 To clone this repository you need [Git](https://git-scm.com/), [Node](https://nodejs.org/) and Node's package manager ([npm](https://www.npmjs.com/)) installed on your computer.
 
-### Dependencies
-
-```
-"dependencies": {
-    "node-sass-chokidar": "^1.3.0",
-    "npm-run-all": "^4.1.3",
-    "react": "^16.2.0",
-    "react-async-script-loader": "^0.3.0",
-    "react-dom": "^16.2.0",
-    "react-router-dom": "^4.2.2",
-    "react-scripts": "1.1.0"
-}
-```
-
 ### Installation
 
 ```bash
