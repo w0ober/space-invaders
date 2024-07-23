@@ -1,3 +1,6 @@
+import 'style.css'
+import $ from 'jquery'
+
 const grid = document.querySelector('.grid')
 const resultsDisplay = document.querySelector('.results')
 let currentShooterIndex = 202
